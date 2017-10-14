@@ -16,7 +16,7 @@ def mobileClientLogin(api):
     # Log in to google music account
     usernameEmail = raw_input("Username: ")
     pw = getpass()
-    api.login(usernameEmail, pw)
+    api.login(usernameEmail, pw, Mobileclient.FROM_MAC_ADDRESS)
 
     # Get the username (i.e. drop @gmail.com if it's there)
     regexUN = re.compile(r"((.*)@gmail.com)|(.*)")
